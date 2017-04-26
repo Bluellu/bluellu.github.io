@@ -1,15 +1,21 @@
 body {
   border: none;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 /* Header */
-header {
-  font-size: 35px;
+h {
+  font-size: 30px;
   float: left;
   width: 30%;
+}
+
+#header {
+  display: block;
+  margin-bottom: 55px;
+  overflow: auto;
 }
 
 /* Navigation */
@@ -62,5 +68,27 @@ ul li {
   color: white; 
 }
 
+/* Main content */
+#content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 60%;  
+}
+
+h2 {
+
+}
+
+/* Game page styling */
+games {
+  display: block;
+}
+
+game {
+  display: block;
+  margin-bottom: 30px;
+  overflow: auto;
+}
 
 
