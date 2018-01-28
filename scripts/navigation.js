@@ -6,10 +6,11 @@
 var navigation = navigation || {};
 
 navigation.ITEMS = { // Name : file
+    'Home' : 'home', 
     'Games' : 'games', 
-    'Resume' : 'resume', 
-    'About Me' : 'about', 
-    'Links' : 'links'
+    'Projects' : 'projects',
+    'Resume' : 'resume',
+    'Other' : 'other' 
 };
 
 /**
