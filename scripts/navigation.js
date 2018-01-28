@@ -6,7 +6,7 @@
 var navigation = navigation || {};
 
 navigation.ITEMS = { // Name : file
-    'Home' : 'home', 
+    'Home' : 'index', 
     'Games' : 'games', 
     'Projects' : 'projects',
     'Resume' : 'resume',
