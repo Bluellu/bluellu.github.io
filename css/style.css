@@ -36,13 +36,13 @@ h {
   width: 70%;
 }
 
-ul {
+#navlist {
   display: inline;
   margin: 0;  
   padding: 0;
 }
 
-ul li {
+#navlist li {
   width: 20%;
   list-style: none;
   float: left;
@@ -120,8 +120,72 @@ game {
 
 /* Image gallery styling */
 img {
-  max-width:800px;
-  max-height:400px;
-  margin: 5px;
+  max-width: 950px;
+  max-height:420px;
+  margin: 10px;
 }
+
+/* Resume styling */
+.rtitle {
+  margin: 0;	
+}
+
+#rheader {
+  text-align: center;
+}
+
+#rname {
+  font-size: 16pt;
+  margin-bottom: 10px;
+}
+
+#rlinks {
+  margin: 0;
+  padding: 0;
+}
+
+#rjob {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+#resume table {
+  width: 100%;
+}
+
+td, tr, #resume p, .pts {
+  margin-top: 0;
+}
+
+.date {
+  text-align: right;
+}
+
+.section {
+  margin-bottom: 35px;
+}
+
+.item {
+  margin-bottom: 35px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

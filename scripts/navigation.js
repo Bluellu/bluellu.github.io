@@ -17,7 +17,7 @@ navigation.ITEMS = { // Name : file
  * Create main navigation menu and insert it into page
  */
 navigation.insertNav = function() {
-    let ul = $('<ul></ul>');
+    let ul = $('<ul></ul>').attr('id', 'navlist');;
 
     for (var i in this.ITEMS) {
         // Create a navigation item
