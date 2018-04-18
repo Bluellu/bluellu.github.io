@@ -19,11 +19,13 @@ body {
   overflow: auto;
 }
 
-h {
+h1 {
+  font-weight:normal;
   color: white;
   font-size: 30px;
   float: left;
   width: 30%;
+  margin: 0;
 }
 
 /* Navigation */
@@ -126,6 +128,12 @@ img {
 }
 
 /* Resume styling */
+#resume {
+  margin-right: auto; 
+  margin-left: auto;
+  max-width: 750px;	  
+}
+
 .rtitle {
   margin: 0;	
 }
@@ -144,21 +152,33 @@ img {
   padding: 0;
 }
 
-#rjob {
-  margin-bottom: 0;
-  margin-top: 30px;
-}
-
 #resume table {
   width: 100%;
 }
 
-td, tr, #resume p, .pts {
+#resume p:not(#rjob), .pts {
   margin-top: 0;
+  padding-top: 0;
+}
+
+table td {
+  padding: 0;
+  width: 50%;
+}
+
+#rjob {
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+.ptitle, .date {
+  margin-bottom: 5px;
+  padding: 0;
 }
 
 .date {
-  text-align: right;
+  padding-left: 40%;
+  text-align: left;
 }
 
 .section {
@@ -166,7 +186,11 @@ td, tr, #resume p, .pts {
 }
 
 .item {
-  margin-bottom: 35px;	
+  margin-bottom: 50px;	
+}
+
+.item p:not(.ptitle, .date) {
+  margin-bottom: 10px;
 }
 
 
