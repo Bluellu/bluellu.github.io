@@ -122,9 +122,12 @@ game {
 
 /* Image gallery styling */
 img {
+  margin: 10px;
+}
+
+img.other {
   max-width: 950px;
   max-height:420px;
-  margin: 10px;
 }
 
 /* Resume styling */
@@ -191,6 +194,45 @@ table td {
 
 .item p:not(.ptitle, .date) {
   margin-bottom: 10px;
+}
+
+/* Projects tab styling */
+img.projects {
+  width: 100%; 
+  margin:0;
+}
+
+ul.proj {
+  width: 100%;
+  display: flex;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.proj li {
+  margin: 0;
+  padding: 15px;
+}
+
+ul.proj li p.caption {
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.img1 {
+  flex: 0.9757;
+}
+.img2 {
+  flex: 1.0058;
+}
+
+ul.proj:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
