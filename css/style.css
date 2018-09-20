@@ -161,6 +161,7 @@ img.other {
 
 #resume p:not(#rjob), .pts {
   margin-top: 0;
+  margin-bottom: 5px;
   padding-top: 0;
 }
 
@@ -185,11 +186,11 @@ table td {
 }
 
 .section {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .item {
-  margin-bottom: 50px;	
+  margin-bottom: 30px;	
 }
 
 .item p:not(.ptitle, .date) {
