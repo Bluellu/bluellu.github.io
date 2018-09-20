@@ -236,6 +236,12 @@ ul.proj:after {
   clear: both;
 }
 
+/*Other page styling*/
+#music p.caption {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 
 
 
