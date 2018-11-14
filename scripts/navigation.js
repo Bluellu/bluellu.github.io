@@ -9,8 +9,8 @@ navigation.ITEMS = { // Name : file
     'Home' : 'index', 
     'Games' : 'games', 
     'Projects' : 'projects',
-    'Resume' : 'resume',
-    'Other' : 'other' 
+    'Art' : 'other',
+	'Resume' : 'resume'
 };
 
 /**
@@ -33,6 +33,15 @@ navigation.insertNav = function() {
     $('#' + page).removeClass('deactivated').addClass('activated');
     
 };
+
+navigation.showMenu = function() {
+  var menu = document.getElementById("main-nav");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
 
 // Init function
 navigation.init = function() {
