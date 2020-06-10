@@ -1,0 +1,23 @@
+#canvas-grid.grid-container {
+  width: 50%;
+  grid-auto-rows: 1fr;
+  display: grid;
+  grid-gap: 0px;
+  background-color: white;
+  margin-right: 25%; 
+  margin-left: 25%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.grid-container::before {
+  margin: 0;
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+}
+
+.grid-item {
+  /*background-color: lightgray;*/
+  padding: auto;
+}
