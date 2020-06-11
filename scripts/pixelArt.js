@@ -1,38 +1,53 @@
 var gridSize = 20;
 var guidelinesOn = false;
+var defaultColor = "#f2f2f2";
 
 // Initialize base color-map
 var colors = new Array(gridSize);
-for (i = 0 ; i < gridSize ; i++) {
-    colors[i] = new Array(gridSize);
-    for (j = 0 ; j < gridSize ; j++) {
-        colors[i][j] = "#f2f2f2";
-    }
-}
+assignDefaultColor();
+
+drawMario();
+drawGrid();
 
 /* Assigns color to a single square at position x,y */
 function assignColor(x, y, hexColor) {
     colors[x - 1][y - 1] = hexColor;
 }
 
-drawMario();
+/* Create grid with defined colors */
+function drawGrid() {
+    var grid1 = document.getElementById("canvas-grid");
+    for (i = 1 ; i < gridSize + 1 ; i++) {
+        for (j = 1 ; j < gridSize + 1 ; j++) {
+            let boxId = [i, j].join('-');
+            if (guidelinesOn) {
+                grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
+                    + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\">" + boxId + "</div>");
+            } else {
+                grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
+                    + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\"></div>");
+            }
+        }
+    }
+}   
 
-// Create squares
-var grid1 = document.getElementById("canvas-grid");
-for (i = 1 ; i < gridSize + 1 ; i++) {
-    for (j = 1 ; j < gridSize + 1 ; j++) {
-        let boxId = [i, j].join('-');
-        if (guidelinesOn) {
-            grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
-                + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\">" + boxId + "</div>");
-        } else {
-            grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
-                + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\"></div>");
+/* Assign default color to all squares in the color array */
+function assignDefaultColor () {
+    for (i = 0 ; i < gridSize ; i++) {
+        colors[i] = new Array(gridSize);
+        for (j = 0 ; j < gridSize ; j++) {
+            colors[i][j] = defaultColor;
         }
     }
 }
 
-// Sample art
+/* Clear entire grid to default color */
+function clearGrid(grid) {
+    assignDefaultColor();
+    drawGrid();
+}
+
+/* Generate sample art */
 function drawMario() {
     var beige = "#ffdab3";
     var red = "#ff3300";
