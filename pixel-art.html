@@ -17,7 +17,11 @@
 
   <div id="app">
     <div id="canvas-grid" class="grid-container"></div>
-    <a class="button" id="clear-bttn">Clear</a>
+    <form id="dimension-input"> 
+      <label for="dimension">Dimension:</label>
+      <input type="number" id="dimension" name="dimension" min="2" max="250">
+    </form>
+    <a class="button" id="clear-bttn" onclick="clearGrid()">Clear</a>
   </div>
 </body>
 	
