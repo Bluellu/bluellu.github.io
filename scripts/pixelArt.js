@@ -1,11 +1,19 @@
+var MAXSIZE = 150;
 var gridSize = 20;
 var guidelinesOn = false;
 var defaultColor = "#f2f2f2";
+var grid1 = document.getElementById("canvas-grid");
 
-// Initialize base color-map
-var colors = new Array(gridSize);
+// Initialize base color-map 
+var colors = new Array(MAXSIZE);
+for (i = 0 ; i < MAXSIZE ; i++) {
+    colors[i] = new Array(MAXSIZE);
+    for (j = 0 ; j < MAXSIZE ; j++) {
+        colors[i][j] = defaultColor;
+    }
+}
+
 assignDefaultColor();
-
 drawMario();
 drawGrid();
 
@@ -16,25 +24,24 @@ function assignColor(x, y, hexColor) {
 
 /* Create grid with defined colors */
 function drawGrid() {
-    var grid1 = document.getElementById("canvas-grid");
-    for (i = 1 ; i < gridSize + 1 ; i++) {
-        for (j = 1 ; j < gridSize + 1 ; j++) {
-            let boxId = [i, j].join('-');
+    grid1.textContent = ''; // Clear up any existing items in the grid
+    for (i = 0 ; i < gridSize ; i++) {
+        for (j = 0 ; j < gridSize ; j++) {
+            let boxId = [i + 1, j + 1].join('-');
             if (guidelinesOn) {
                 grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
-                    + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\">" + boxId + "</div>");
+                    + colors[i][j] + "; grid-column: " + (i + 1) + "; grid-row:" + (j + 1) + "\">" + boxId + "</div>");
             } else {
                 grid1.insertAdjacentHTML('beforeend', "<div class='grid-item item" + boxId + "' id='" + boxId + "' style=\"background-color: "
-                    + colors[i - 1][j - 1] + "; grid-column: " + i + "; grid-row:" + j + "\"></div>");
+                    + colors[i][j] + "; grid-column: " + (i + 1) + "; grid-row:" + (j + 1) + "\"></div>");
             }
         }
     }
-}   
+}
 
 /* Assign default color to all squares in the color array */
 function assignDefaultColor () {
     for (i = 0 ; i < gridSize ; i++) {
-        colors[i] = new Array(gridSize);
         for (j = 0 ; j < gridSize ; j++) {
             colors[i][j] = defaultColor;
         }
@@ -44,6 +51,12 @@ function assignDefaultColor () {
 /* Clear entire grid to default color */
 function clearGrid(grid) {
     assignDefaultColor();
+    drawGrid();
+}
+
+function resizeGrid(newSize) {    
+    grid1.textContent = '';
+    gridSize = newSize;
     drawGrid();
 }
 

@@ -17,10 +17,12 @@
 
   <div id="app">
     <div id="canvas-grid" class="grid-container"></div>
-    <form id="dimension-input"> 
+
+    <div id="dimension-input"> 
       <label for="dimension">Dimension:</label>
-      <input type="number" id="dimension" name="dimension" min="2" max="250">
-    </form>
+      <input type="number" id="dimension" name="dimension" min="3" max="150" onchange="resizeGrid(this.value)">
+    </div>
+    
     <a class="button" id="clear-bttn" onclick="clearGrid()">Clear</a>
   </div>
 </body>
