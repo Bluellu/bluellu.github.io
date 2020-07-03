@@ -8,9 +8,6 @@ body {
   margin-top: 0;
 }
 
-ul {  
-  list-style-type: none;
-}
 
 /* Header items*/
 #header {
@@ -116,7 +113,8 @@ h1 {
 #mobile-navlist {  
   display: none;
   padding: 0;
-  text-align: center;
+  text-align: center;  
+  list-style-type: none;
 }
 
 #mobile-navlist li {
