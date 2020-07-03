@@ -2,17 +2,33 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css?v=1.0" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="scripts/navigation.js"></script>
   <title>L. Mazzi - Other</title>
 </head>
 
 <body>
   <div id="header">
-    <h1>Luisa Mazzi</h1>
+    <div class="title">
+      <a href="index.html"><h1>Luisa Mazzi</h1></a>
+    </div>
+
+    <div id="mobile-nav">
+      <div class="hamburguer">
+        <a id="mobile-nav-bttn" class="button" onclick="displayNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <nav id="mobile-menu"></nav>
+    </div>
+
     <nav id="main-nav"></nav>
   </div>
+
   <div id="content">
     <div id="music">
       <h2>Music</h2>     
