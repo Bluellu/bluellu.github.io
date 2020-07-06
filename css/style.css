@@ -163,6 +163,10 @@ h1 {
   .title {
    width: 60%;
   }
+
+  img.other {
+    width: 100%;
+  }
 }
 
 /* Tablet toggle */
@@ -188,6 +192,10 @@ h1 {
   
   body {
     width: 70%;    
+  }
+
+  img.other {
+    max-height: 420px;
   }
 }
 
@@ -244,7 +252,6 @@ img {
 
 img.other {
   max-width: 950px;
-  max-height:420px;
 }
 
 
