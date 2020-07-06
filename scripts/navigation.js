@@ -22,7 +22,7 @@ navigation.ITEMS = { // Name : file
     'Games' : 'games', 
     'Projects' : 'projects',
     'Art' : 'other',
-	'Resume' : 'resume'
+	  'Resume' : 'resume'
 };
 
 /**
@@ -39,7 +39,7 @@ navigation.insertNav = function() {
         ul.append(li);
 
         // Create a navigation item for mobile nav
-        let li2 = $('<li id=m-"' + this.ITEMS[i]+ '"><a href="' + this.ITEMS[i] + '.html">'+ i + '</a></li>');
+        let li2 = $('<li id=m-"' + this.ITEMS[i]+ '"><hr><a href="' + this.ITEMS[i] + '.html">'+ i + '</a></li>');
         li.addClass('deactivated');
         ul2.append(li2); 
 

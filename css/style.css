@@ -91,6 +91,7 @@ h1 {
   color: white; 
 }
 
+
 /* Mobile navigation */
 #mobile-nav {
   width: 100%;
@@ -115,18 +116,26 @@ h1 {
   padding: 0;
   text-align: center;  
   list-style-type: none;
+  margin-bottom: 0;
 }
 
-#mobile-navlist li {
-  margin-top: 4px;
-  margin-bottom: 4px;
+#mobile-navlist li {  
+  text-align: center;
+  margin: 0;
   width: 100%;
 }
 
+#mobile-navlist li hr {
+  margin: 0;
+}
+
 #mobile-navlist a {
+  display: block;
+  width: 100%;
   color: white;
   font-size: 18px;
-  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   text-decoration: none;
 }
 
@@ -135,6 +144,7 @@ h1 {
   color: #ddd;
   cursor: pointer;
 } 
+
 
 /* Mobile toggle */
 @media only screen and (max-width: 665px) {
@@ -181,6 +191,7 @@ h1 {
   }
 }
 
+
 /* Content */
 #content {
   background-color: white;
@@ -193,6 +204,7 @@ h1 {
   padding-right: 8%;
 }
 
+
 /* Game page styling */
 games {
   display: block;
@@ -204,6 +216,7 @@ game {
   float: none;
   overflow: auto;
 }
+
 
 /* Video resizing */
 /* Based off: https://coolestguidesontheplanet.com/videodrome/youtube/ */
@@ -223,6 +236,7 @@ game {
   width:100%;
 }
 
+
 /* Image gallery styling */
 img {
   margin: 10px;
@@ -232,6 +246,7 @@ img.other {
   max-width: 950px;
   max-height:420px;
 }
+
 
 /* Resume styling */
 #resume {
