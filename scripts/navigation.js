@@ -39,8 +39,8 @@ navigation.insertNav = function() {
         ul.append(li);
 
         // Create a navigation item for mobile nav
-        let li2 = $('<li id=m-"' + this.ITEMS[i]+ '"><hr><a href="' + this.ITEMS[i] + '.html">'+ i + '</a></li>');
-        li.addClass('deactivated');
+        let li2 = $('<li id=m-' + this.ITEMS[i]+ '><hr><a href="' + this.ITEMS[i] + '.html">'+ i + '</a></li>');
+        li2.addClass('m-deactivated');
         ul2.append(li2); 
 
         $('#main-nav').append(ul);        
@@ -50,7 +50,8 @@ navigation.insertNav = function() {
     // Highlight button for the current page
     let path = window.location.pathname;  
     let page = ((path.split("/").pop()).split('.'))[0];
-    $('#' + page).removeClass('deactivated').addClass('activated');   
+    $('#' + page).removeClass('deactivated').addClass('activated');  
+    $('#m-' + page).removeClass('m-deactivated').addClass('m-activated');   
 };
 
 navigation.showMenu = function() {

@@ -132,7 +132,6 @@ h1 {
 #mobile-navlist a {
   display: block;
   width: 100%;
-  color: white;
   font-size: 18px;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -145,6 +144,13 @@ h1 {
   cursor: pointer;
 } 
 
+.m-activated a {
+  color: #dddddd;
+}
+
+.m-deactivated a{
+  color: white; 
+}
 
 /* Mobile toggle */
 @media only screen and (max-width: 665px) {
