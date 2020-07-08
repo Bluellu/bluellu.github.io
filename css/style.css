@@ -257,6 +257,13 @@ game {
   overflow: auto;
 }
 
+img#galli {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 
 /* Video resizing */
 /* Based off: https://coolestguidesontheplanet.com/videodrome/youtube/ */

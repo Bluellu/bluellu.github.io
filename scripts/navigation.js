@@ -18,7 +18,7 @@ function displayNav() {
 var navigation = navigation || {};
 
 navigation.ITEMS = { // Name : file
-    'Home' : 'index', 
+    'About' : 'index', 
     'Games' : 'games', 
     'Projects' : 'projects',
     'Art' : 'other',
