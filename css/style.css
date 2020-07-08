@@ -173,6 +173,12 @@ h1 {
   img.other {
     width: 100%;
   }
+
+  #my-picture {
+    max-width: 50%;
+    margin-left: 0;
+    position: center;
+  }
 }
 
 /* Tablet toggle */
@@ -183,7 +189,17 @@ h1 {
 
   body {
     width: 100%; 
-  }    
+  }   
+  
+  #my-picture {
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 10%;
+  }
+  #intro {
+    width: 50%;
+    float: left;
+  }
 }
 
 /* Desktop toggle */
@@ -203,6 +219,16 @@ h1 {
   img.other {
     max-height: 420px;
   }
+
+  #my-picture {
+    width: 20%;
+    margin-right: 5%;
+    margin-left: 10%;
+  }
+  #intro {
+    width: 60%;
+    float: left;
+  }
 }
 
 
@@ -216,8 +242,8 @@ h1 {
   padding-bottom: 10%;
   padding-left: 8%; 
   padding-right: 8%;
+  overflow: auto;
 }
-
 
 /* Game page styling */
 games {
