@@ -8,7 +8,6 @@ body {
   margin-top: 0;
 }
 
-
 /* Header items*/
 #header {
   height: auto;
@@ -174,10 +173,20 @@ h1 {
     width: 100%;
   }
 
+  /* About */
   #my-picture {
     max-width: 50%;
     margin-left: 0;
     position: center;
+  }
+
+  /* Resume */ 
+  #awards {
+    columns: 1;
+  }
+  
+  p.date {
+    padding-left: 12%;
   }
 }
 
@@ -191,14 +200,26 @@ h1 {
     width: 100%; 
   }   
   
+  /* About */
   #my-picture {
     width: 30%;
     margin-right: 5%;
     margin-left: 10%;
   }
+
   #intro {
     width: 50%;
     float: left;
+  }
+
+  /* Resume */
+  #awards {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  p.date {
+    padding-left: 30%;
   }
 }
 
@@ -220,14 +241,30 @@ h1 {
     max-height: 420px;
   }
 
+  /* About */
   #my-picture {
     width: 20%;
     margin-right: 5%;
     margin-left: 10%;
   }
+  
   #intro {
     width: 60%;
     float: left;
+  }
+
+  /* Resume */
+  #awards {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  
+  p.date {
+    padding-left: 20%;
+  }
+  
+  p.date {
+    padding-left: 30%;
   }
 }
 
@@ -295,10 +332,24 @@ img.other {
 
 
 /* Resume styling */
-#resume {
+hr {
+  margin: 0;
+}
+
+#resume-div {
+  margin-top: 40px;
   margin-right: auto; 
   margin-left: auto;
   max-width: 750px;	  
+}
+
+#resume-div td {
+  vertical-align: center;
+}
+
+.section-content {
+  margin-top: 6px;
+  margin-bottom: 18px;
 }
 
 .rtitle {
@@ -319,11 +370,11 @@ img.other {
   padding: 0;
 }
 
-#resume table {
+#resume-div table {
   width: 100%;
 }
 
-#resume p:not(#rjob), .pts {
+#resume-div p:not(#rjob):not(.rtitle), .pts {
   margin-top: 0;
   margin-bottom: 5px;
   padding-top: 0;
@@ -331,11 +382,11 @@ img.other {
 
 table td {
   padding: 0;
-  width: 50%;
+  width: 60%;
 }
 
 #rjob {
-  margin-bottom: 0;
+  margin-bottom: 5px;;
   margin-top: 30px;
 }
 
@@ -345,7 +396,6 @@ table td {
 }
 
 .date {
-  padding-left: 40%;
   text-align: left;
 }
 
