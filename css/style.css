@@ -339,6 +339,11 @@ hr {
   max-width: 750px;	  
 }
 
+#resume-div li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 #resume-div td {
   vertical-align: center;
 }
