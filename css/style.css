@@ -2,6 +2,7 @@ body {
   background-color: #78cfc7;
   border: none;
   font-family: "Noto Sans", sans-serif; color: #333333;
+  font-size: 18px;
   margin-right: auto;
   margin-left: auto;  
   margin-top: 0;
@@ -375,9 +376,11 @@ h2 {
   }
 
   #index-content {
+    padding-top: 2%;
     display: flex;
     flex-wrap: nowrap;
     background-color: rgb(255, 255, 255);
+    padding-bottom: 2%;    
   }
 
   
