@@ -25,12 +25,18 @@ navigation.ITEMS = { // Name : file
 	  'Resume' : 'resume'
 };
 
+navigation.LANGS = { // Name : path
+  'EN' : '',
+  'FR' : 'fr/'   
+};
+
 /**
  * Create navigation menus and insert them into page
  */
 navigation.insertNav = function() {
     let ul = $('<ul></ul>').attr('id', 'navlist');
     let ul2 = $('<ul></ul>').attr('id', 'mobile-navlist');
+    let ul3 = $('<ul></ul>').attr('id', 'languagenav');
 
     for (var i in this.ITEMS) {
         // Create a navigation item for main nav
@@ -47,11 +53,36 @@ navigation.insertNav = function() {
         $('#mobile-menu').append(ul2);
     }
 
+        // Highlight button for the current page
+        let path = window.location.pathname;  
+        let parts = path.split("/");
+        let page = ((parts.pop()).split('.'))[0];
+        let url = parts.pop();
+        let pageback = "";
+        if (url != "bluellu.github.io") {
+          pageback = "../"
+        }
+    for (var i in this.LANGS) {
+              var link = pageback + this.LANGS[i] + page;
+
+              // Create a navigation item for language nav
+              let li = $('<li id=l-' + i + '><a href="' + link + '.html">'+ i + '</a></li>');
+              li.addClass('l-deactivated');
+              ul3.append(li);
+      
+              $('#lang-nav').append(ul3);          
+    }
+
     // Highlight button for the current page
-    let path = window.location.pathname;  
-    let page = ((path.split("/").pop()).split('.'))[0];
     $('#' + page).removeClass('deactivated').addClass('activated');  
     $('#m-' + page).removeClass('m-deactivated').addClass('m-activated');   
+    if (pageback == "../") {
+      $('#l-FR').removeClass('l-deactivated').addClass('l-activated');   
+    } else {
+      $('#l-EN').removeClass('l-deactivated').addClass('l-activated');   
+
+    }
+
 };
 
 navigation.showMenu = function() {
