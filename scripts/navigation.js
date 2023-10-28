@@ -55,27 +55,27 @@ navigation.insertNav = function () {
 
   // Highlight button for the current page
   let path = window.location.pathname;
-  console.log(path);
+  var page;
+  var pageback = "";
 
-  let parts = path.split("/");
+  if (path == "/" || path == "") {
+    page = "index";
+    pageback = "";
+  } else {
 
-  let lastpart = parts.pop();
-  console.log(lastpart);
+    let parts = path.split("/");
+    let lastpart = parts.pop();
+    page = (lastpart.split('.'))[0];
 
-  let pageback = "";
+    if (page == '' || page == null) {
+      page == "index";
+    }
 
+    let url = parts.pop();
+    if (url == "fr") {
+      pageback = "../";
+    }
 
-  let page = (lastpart.split('.'))[0];
-
-  console.log(page);
-
-  if (page == '' || page == null) {
-    page == "index";
-  }
-
-  let url = parts.pop();
-  if (url == "fr") {
-    pageback = "../";
   }
 
 
