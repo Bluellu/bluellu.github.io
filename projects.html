@@ -1,95 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css?v=1.0" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="scripts/navigation.js"></script>
-  <title>L. Mazzi - Links</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css?v=1.0" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="scripts/navigation.js"></script>
+	<title>L. Mazzi - Links</title>
 </head>
 
 <body>
 	<div id="header" class="flex-container">
 		<div class="title">
-		  <a href="index.html"><h1>Luisa C. Mazzi</h1></a>
+			<a href="index.html">
+				<h1>Luisa C. Mazzi</h1>
+			</a>
 		</div>
-	
+
 		<nav id="main-nav"></nav>
 		<nav id="lang-nav"></nav>
-	
-		<div id="mobile-nav">
-		  <div class="hamburguer">
-			<a id="mobile-nav-bttn" class="button" onclick="displayNav()">
-			  <i class="fa fa-bars"></i>
-			</a>
-		  </div>
-		  
-		  <nav id="mobile-menu"></nav>
-		</div>
-	  </div>
 
-  <div id="content">
-    <div id="Graphics">
-      <h2>Graphic Simulations</h2>
-      <p>3D OpenGL simulations developed in C++.</p>
-	  <hr>
-      <h3>Plant Life</h3>
-	  <p>Graphic simulation of a forest landscape.</p>
-	  <ul id="plant-life" class="proj">
-	    <li id="img1">
-	        <img class='projects' src="pictures/ground_simulation.png" alt="Ground Simulation">
- 	        <p class="caption">Randomized 3D ground-simulation algorithm based on cosine curves.</p>
-	    </li>
-	    <li id="img2">
-	        <img class='projects' src="pictures/plant_life.png" alt="Plant Life">
-	        <p class="caption">Final product, including recursively generated trees.</p>
-	    </li>
-      </ul>		 
-	
-	  <h3>Raytracing</h3>
-	  <p>An implementation of Raytracing on simple figures.</p>
-	  <ul id="raytracing" class="proj">
-	    <li id="img3">
-	      <img class='projects' src="pictures/1.png" alt="simple raytracing">
- 	      <p class="caption">Simple raytracing on elliptical shapes and a plane.</p>
-	      <img class='projects' src="pictures/2.png" alt="with shadows">
-	      <p class="caption">With additional shadows.</p>
-	    </li>
-	    <li id="img4">
-	      <img class='projects' src="pictures/antialias.png" alt="final product">
-	      <p class="caption">Final raytracing with shadows, reflection, specular component, and antialiasing.</p>
-	    </li>
-      </ul>
+		<div id="mobile-nav">
+			<div class="hamburguer">
+				<a id="mobile-nav-bttn" class="button" onclick="displayNav()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+
+			<nav id="mobile-menu"></nav>
+		</div>
 	</div>
-	
-	<hr>
-	
-	<div id="filter-mailer">
-      <h2>Filter Mailer</h2>
-      <p>Python application developed independently for small-scale business use.</p>	
-	  <p>Allows the user to import and filter a list of e-mails from an Excel spreadsheet, 
-	  then send a collective email to all addresses that pass the filter. 
-	  Includes backup system for the case where execution is interrupted (a new spreadsheet is saved in a backup folder).</p>	
-	  <ul id="filter-mailer1" class="proj">
-	  	<li id="img5">
-	      <img class='projects' src="pictures/filter_mailer.png" alt="filter mailer">
-	      <p class="caption">Example of input and filtering functionality. Exclusions are applied on top of inclusions.</p>
-	    </li>
-	  </ul>
-	  <ul class="proj">
-	    <li id="img6">
-	      <img class='projects' src="pictures/filter_mailer2.png" alt="filter mailer 2">
- 	      <p class="caption">Email creation window. May include an image, which is added to the email's HTML body.</p>
-		</li>
-		<li id="img7">
-	      <img class='projects' src="pictures/filter_mailer3.png" alt="filter mailer 3">
-	      <p class="caption">Login and send window. Supports SMTP servers.</p>
-	    </li>
-      </ul>
-	  
+
+	<div id="content">
+		<div id="Graphics">
+			<h2>Graphic Simulations</h2>
+			<p>3D OpenGL simulations developed in C++.</p>
+			<hr>
+			<h3>Plant Life</h3>
+			<p>Graphic simulation of a forest landscape.</p>
+			<ul id="plant-life" class="proj">
+				<li id="img1">
+					<img class='projects' src="pictures/ground_simulation.png" alt="Ground Simulation">
+					<p class="caption">Randomized 3D ground-simulation algorithm based on cosine curves.</p>
+				</li>
+				<li id="img2">
+					<img class='projects' src="pictures/plant_life.png" alt="Plant Life">
+					<p class="caption">Final product, including recursively generated trees.</p>
+				</li>
+			</ul>
+
+			<h3>Raytracing</h3>
+			<p>An implementation of Raytracing on simple figures.</p>
+			<ul id="raytracing" class="proj">
+				<li id="img3">
+					<img class='projects' src="pictures/1.png" alt="simple raytracing">
+					<p class="caption">Simple raytracing on elliptical shapes and a plane.</p>
+					<img class='projects' src="pictures/2.png" alt="with shadows">
+					<p class="caption">With additional shadows.</p>
+				</li>
+				<li id="img4">
+					<img class='projects' src="pictures/antialias.png" alt="final product">
+					<p class="caption">Final raytracing with shadows, reflection, specular component, and antialiasing.
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<div id="filter-mailer">
+			<h2>Filter Mailer</h2>
+			<p>Python application developed independently for small-scale business use.</p>
+			<p>Allows the user to import and filter a list of e-mails from an Excel spreadsheet,
+				then send a collective email to all addresses that pass the filter.
+				Includes backup system for the case where execution is interrupted (a new spreadsheet is saved in a
+				backup folder).</p>
+			<ul id="filter-mailer1" class="proj">
+				<li id="img5">
+					<img class='projects' src="pictures/filter_mailer.png" alt="filter mailer">
+					<p class="caption">Example of input and filtering functionality. Exclusions are applied on top of
+						inclusions.</p>
+				</li>
+			</ul>
+			<ul class="proj">
+				<li id="img6">
+					<img class='projects' src="pictures/filter_mailer2.png" alt="filter mailer 2">
+					<p class="caption">Email creation window. May include an image, which is added to the email's HTML
+						body.</p>
+				</li>
+				<li id="img7">
+					<img class='projects' src="pictures/filter_mailer3.png" alt="filter mailer 3">
+					<p class="caption">Login and send window. Supports SMTP servers.</p>
+				</li>
+			</ul>
+
+		</div>
 	</div>
-  </div>
 </body>
