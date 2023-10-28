@@ -57,6 +57,9 @@ navigation.insertNav = function() {
         let path = window.location.pathname;  
         let parts = path.split("/");
         let page = ((parts.pop()).split('.'))[0];
+        if (page == "" || page == null) {
+          page = "index";  // for bluellu.github.io link case 
+        }
         let url = parts.pop();
         let pageback = "";
         if (url != "bluellu.github.io") {
