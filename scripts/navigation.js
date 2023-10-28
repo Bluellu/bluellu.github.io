@@ -56,15 +56,20 @@ navigation.insertNav = function() {
         // Highlight button for the current page
         let path = window.location.pathname;  
         let parts = path.split("/");
-        let page = ((parts.pop()).split('.'))[0];
-        if (page == "" || page == null) {
-          page = "index";  // for bluellu.github.io link case 
-        }
-        let url = parts.pop();
+        
+        let lastpart = parts.pop();
+        var page;
         let pageback = "";
-        if (url != "bluellu.github.io") {
-          pageback = "../"
+        if (lastpart == "bluellu.github.io") {
+          page = "index";
         }
+        else {
+          page = (lastpart.split('.'))[0];
+          let url = parts.pop();
+            if (url != "bluellu.github.io") {
+            pageback = "../"
+        }
+      }
     for (var i in this.LANGS) {
               var link = pageback + this.LANGS[i] + page;
 
