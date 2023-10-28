@@ -25,6 +25,14 @@ navigation.ITEMS = { // Name : file
   'Resume': 'resume'
 };
 
+navigation.ITEMSFR = { // Name : file
+  'About' : 'Introdution',
+  'Games' : 'Jeux',
+  'Projects': 'Projets',
+  'Art' : 'Art',
+  'Resume':'CV'
+};
+
 navigation.LANGS = { // Name : path
   'EN': '',
   'FR': 'fr/'
@@ -38,26 +46,12 @@ navigation.insertNav = function () {
   let ul2 = $('<ul></ul>').attr('id', 'mobile-navlist');
   let ul3 = $('<ul></ul>').attr('id', 'languagenav');
 
-  for (var i in this.ITEMS) {
-    // Create a navigation item for main nav
-    let li = $('<li id="' + this.ITEMS[i] + '"><a href="' + this.ITEMS[i] + '.html">' + i + '</a></li>');
-    li.addClass('deactivated');
-    ul.append(li);
-
-    // Create a navigation item for mobile nav
-    let li2 = $('<li id=m-' + this.ITEMS[i] + '><hr><a href="' + this.ITEMS[i] + '.html">' + i + '</a></li>');
-    li2.addClass('m-deactivated');
-    ul2.append(li2);
-
-    $('#main-nav').append(ul);
-    $('#mobile-menu').append(ul2);
-  }
-
   // Highlight button for the current page
   let path = window.location.pathname;
   var page;
   var pageback = "";
 
+  let french = false;
   if (path == "/" || path == "") {
     page = "index";
     pageback = "";
@@ -72,10 +66,28 @@ navigation.insertNav = function () {
     }
 
     let url = parts.pop();
+
     if (url == "fr") {
       pageback = "../";
+      french = true;
     }
 
+  }
+
+  for (var i in this.ITEMS) {
+    // Create a navigation item for main nav
+    var text = french ? this.ITEMSFR[i] : i;
+    let li = $('<li id="' + this.ITEMS[i] + '"><a href="' + this.ITEMS[i] + '.html">' + text + '</a></li>');
+    li.addClass('deactivated');
+    ul.append(li);
+
+    // Create a navigation item for mobile nav
+    let li2 = $('<li id=m-' + this.ITEMS[i] + '><hr><a href="' + this.ITEMS[i] + '.html">' + text + '</a></li>');
+    li2.addClass('m-deactivated');
+    ul2.append(li2);
+
+    $('#main-nav').append(ul);
+    $('#mobile-menu').append(ul2);
   }
 
 
