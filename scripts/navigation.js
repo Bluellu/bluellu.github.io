@@ -55,20 +55,29 @@ navigation.insertNav = function () {
 
   // Highlight button for the current page
   let path = window.location.pathname;
+  console.log(path);
+
   let parts = path.split("/");
 
   let lastpart = parts.pop();
-  var page;
+  console.log(lastpart);
+
   let pageback = "";
-  if (lastpart == "bluellu.github.io") {
-    page = "index";
-  } else {
-    page = (lastpart.split('.'))[0];
-    let url = parts.pop();
-    if (url != "bluellu.github.io") {
-      pageback = "../";
-    }
+
+
+  let page = (lastpart.split('.'))[0];
+
+  console.log(page);
+
+  if (page == '' || page == null) {
+    page == "index";
   }
+
+  let url = parts.pop();
+  if (url == "fr") {
+    pageback = "../";
+  }
+
 
   for (var i in this.LANGS) {
     var link = pageback + this.LANGS[i] + page;
